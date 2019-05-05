@@ -1,0 +1,24 @@
+---
+name: UiLoadingModal
+route: '/ui-loading-modal'
+---
+
+import { Props, Playground } from 'docz'
+import IFramePlayground from 'docz-iframe-playground'
+import { UiLoadingModal } from './ui-loading-modal'
+
+# UiLoadingModal
+
+UiLoadingModal shows a full-screen modal overlay with a spinner. Pass in the **isOpen** prop to control visibility on the screen.
+
+## Example
+
+<Playground>
+  <IFramePlayground minHeight={400} maxHeight={800}>
+    <UiLoadingModal isOpen={true} />
+  </IFramePlayground>
+</Playground>
+
+## Props
+
+<Props of={UiLoadingModal} />

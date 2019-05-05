@@ -1,0 +1,60 @@
+---
+name: UiMenu
+route: '/ui-menu'
+---
+
+import { HashRouter } from 'react-router-dom'
+import { Route } from 'react-router-dom'
+import { Playground, Props } from 'docz'
+import { UiMenu } from './ui-menu'
+import { ExampleBox } from './ui-doc-helpers'
+
+# UiMenu
+
+Renders a bulma menu based on routes. You must pass in the **menu** prop which contains an array of sections and menu items. The Menu sections and items within each section will be in the same order that is passed in via the menu prop. Any props passed to the item objects will be passed through to the component.
+
+UiMenu relies on react-router for navigation and must be within a Router context.
+
+## Example
+
+<Playground>
+  <HashRouter hashType="hashbang">
+    <UiMenu
+      {...props}
+      menu={[
+        {
+          label: 'First',
+          items: [
+            {
+              name: 'Link 1',
+              path: 'link-1',
+              component: ExampleBox,
+              text: 'Example 1'
+            },
+            {
+              name: 'Link 2',
+              path: 'link-2',
+              component: ExampleBox,
+              text: 'Example 2'
+            }
+          ]
+        },
+        {
+          label: 'Second',
+          items: [
+            {
+              name: 'Link 3',
+              path: 'link-3',
+              component: ExampleBox,
+              text: 'Example 3'
+            }
+          ]
+        }
+      ]}
+    />
+  </HashRouter>
+</Playground>
+
+## Props
+
+<Props of={UiMenu} />

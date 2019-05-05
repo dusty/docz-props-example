@@ -1,0 +1,32 @@
+---
+name: UiCard
+route: '/ui-card'
+---
+
+import { Playground, Props } from 'docz'
+import { UiCard } from './ui-card'
+import { ExampleButtonCog, ExampleButtonSearch } from './ui-doc-helpers'
+
+# UiCard
+
+Renders a uniform Card with a title, optional buttons, and the content.
+
+## Example
+
+<Playground>
+  <UiCard
+    title="Card Title"
+    buttons={
+      <>
+        <ExampleButtonCog />
+        <ExampleButtonSearch />
+      </>
+    }
+  >
+    <p>This is a child paragraph</p>
+  </UiCard>
+</Playground>
+
+## Props
+
+<Props of={UiCard} />

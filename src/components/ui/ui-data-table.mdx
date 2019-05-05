@@ -1,0 +1,71 @@
+---
+name: UiDataTable
+route: '/ui-data-table'
+---
+
+import { Playground, Props } from 'docz'
+import { UiDataTable } from './ui-data-table'
+
+# UiDataTable
+
+Renders a data table. You must pass in the **columns** prop which contains the data schema. The **rows** which are an array of objects to display in the table. The **rowKey** which is the unique identifier in each row.
+
+The table will automatically paginate the data (defaults to 10) and show a filter search bar. You can set **hideSearch** to true to disable the search bar.
+
+If **onClick** is a callback function, the table will be hoverable and the row clicked will be passed back to the callback.
+
+If **onSelect** is a callback function, then the table is selectable. You must set **showSelect** to true, to show the selection. The **onSelect** callback will be passed an array of selected rows. NOTE: Canceling the select returns an empty array.
+
+The columns schema defines the **key** in each column and an optional **label** to present in the table header. By default, the value of `row[column.key]` will be displayed. If a **render** prop is passed, the render prop will be executed passing in the **row** instead.
+
+## Example
+
+<Playground>
+  <UiDataTable
+    columns={[
+      { key: 'id', label: 'ID' },
+      { key: 'last', label: 'Last Name' },
+      { key: 'first', label: 'First Name' },
+      {
+        key: 'full',
+        label: 'Full Name',
+        render: row => `${row.first} ${row.last}`
+      }
+    ]}
+    rows={[
+      { id: 1, first: 'Monkey', last: 'Man' },
+      { id: 2, first: 'Cat', last: 'Girl' },
+      { id: 3, first: 'Dog', last: 'Hammer' }
+    ]}
+    rowKey="id"
+    pageSize={2}
+    onClick={row => console.log('clicked', row)}
+  />
+  <hr />
+  <UiDataTable
+    columns={[
+      { key: 'id', label: 'ID' },
+      { key: 'last', label: 'Last Name' },
+      { key: 'first', label: 'First Name' },
+      {
+        key: 'full',
+        label: 'Full Name',
+        render: row => `${row.first} ${row.last}`
+      }
+    ]}
+    rows={[
+      { id: 1, first: 'Monkey', last: 'Man' },
+      { id: 2, first: 'Cat', last: 'Girl' },
+      { id: 3, first: 'Dog', last: 'Hammer' }
+    ]}
+    rowKey="id"
+    pageSize={2}
+    showSelect={true}
+    onClick={row => console.log('clicked', row)}
+    onSelect={rows => console.log('selected', rows)}
+  />
+</Playground>
+
+## Props
+
+<Props of={UiDataTable} />

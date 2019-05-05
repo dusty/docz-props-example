@@ -1,0 +1,39 @@
+---
+name: UiCardModal
+route: '/ui-card-modal'
+---
+
+import { Props, Playground } from 'docz'
+import IFramePlayground from 'docz-iframe-playground'
+import { UiCardModal } from './ui-card-modal'
+
+# UiCardModal
+
+Wrap any element in a card modal. The element will be mounted and animated when **isOpen** is true.
+
+The footer will always show the **Cancel** button. The **Save** and **Delete** buttons are only shown if the **onSave** or **onDelete** props are passed in.
+
+When the delete icon on the top-right or the **Cancel** button is clicked, it will fire the **onCancel** event. If the **Save** button is clicked, it will fire the **onSave** button. If the **Delete** button is clicked it will fire the **onDelete** button.
+
+The parent component should handle these events and change the **isOpen** prop to false to close the modal.
+
+## Example
+
+<Playground>
+  <IFramePlayground minHeight={400} maxHeight={800}>
+    <UiCardModal
+      title="Example Modal"
+      isOpen={true}
+      onCancel={() => setShowModal(false)}
+      onSave={() => setShowModal(false)}
+      onDelete={() => setShowModal(false)}
+      saveText="Custom Save"
+    >
+      <p>Children Content Goes Here. It can be html or another Component</p>
+    </UiCardModal>
+  </IFramePlayground>
+</Playground>
+
+## Props
+
+<Props of={UiCardModal} />

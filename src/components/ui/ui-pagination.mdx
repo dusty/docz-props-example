@@ -1,0 +1,51 @@
+---
+name: UiPagination
+route: '/ui-pagination'
+---
+
+import { Playground, Props } from 'docz'
+import { UiPagination } from './ui-pagination'
+
+# UiPagination
+
+Renders pagination buttons.
+
+Pass in the number of **pages** and the current **page** as props. Use the callback functions (**onFirst**, **onNext**, ...) to change the state of the parent component when a pagination button is clicked.
+
+You may set the **align** prop to control the positioning on the viewport.
+
+## Example
+
+<Playground>
+  <UiPagination
+    align="left"
+    pages={8}
+    page={1}
+    onFirst={() => console.log('first clicked')}
+    onNext={() => console.log('next clicked')}
+    onPrevious={() => console.log('previous clicked')}
+    onLast={() => console.log('last clicked')}
+  />
+  <UiPagination
+    align="centered"
+    pages={8}
+    page={4}
+    onFirst={() => console.log('first clicked')}
+    onNext={() => console.log('next clicked')}
+    onPrevious={() => console.log('previous clicked')}
+    onLast={() => console.log('last clicked')}
+  />
+  <UiPagination
+    align="right"
+    pages={8}
+    page={8}
+    onFirst={() => console.log('first clicked')}
+    onNext={() => console.log('next clicked')}
+    onPrevious={() => console.log('previous clicked')}
+    onLast={() => console.log('last clicked')}
+  />
+</Playground>
+
+## Props
+
+<Props of={UiPagination} />

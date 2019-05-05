@@ -1,0 +1,28 @@
+---
+name: UiLoadingPage
+route: '/ui-loading-page'
+---
+
+import { Props, Playground } from 'docz'
+import IFramePlayground from 'docz-iframe-playground'
+import { UiLoadingPage } from './ui-loading-page'
+
+# UiLoadingPage
+
+UiLoadingPage shows a full-screen page with a loading indicator. There are no props to control visibility, it is expected to replace the rendering of the page based on criteria.
+
+## Example
+
+<Playground>
+  <IFramePlayground minHeight={400} maxHeight={800}>
+    <UiLoadingPage />
+  </IFramePlayground>
+</Playground>
+
+### Example Usage
+
+```
+const App = () => {
+  return isLoading ? <UiLoadingPage /> : <RealComponent />
+}
+```

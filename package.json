@@ -1,0 +1,34 @@
+{
+  "name": "docz-props-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "docz:dev": "docz dev -o",
+    "docz:build": "docz build"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@hot-loader/react-dom": "^16.8.6",
+    "angular": "^1.7.8",
+    "bulma": "^0.7.4",
+    "bulma-extensions": "6.2.4",
+    "jw-paginate": "^1.0.4",
+    "natural-orderby": "^2.0.3",
+    "rbx": "^2.1.0",
+    "react": "^16.8.6",
+    "react-hot-loader": "^4.8.4",
+    "react-router-dom": "^5.0.0",
+    "react-transition-group": "^4.0.0",
+    "use-deep-compare-effect": "^1.2.0"
+  },
+  "devDependencies": {
+    "docz": "^1.1.0",
+    "docz-iframe-playground": "^1.0.9",
+    "docz-plugin-css": "^0.11.0",
+    "docz-theme-default": "^1.1.0"
+  }
+}

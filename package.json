@@ -13,7 +13,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@hot-loader/react-dom": "^16.8.6",
-    "angular": "^1.7.8",
     "bulma": "^0.7.4",
     "bulma-extensions": "6.2.4",
     "jw-paginate": "^1.0.4",
